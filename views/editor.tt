@@ -1,0 +1,72 @@
+<div class="modal fade" id="NoteDeleteModal"
+  tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">Delete Note <strong></strong>?</div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" id="NoteDeleteConfirm">Delete Note</button>
+      </div>
+    </div>
+  </div>
+</div><!-- /.modal -->
+ 
+<div class="modal fade" id="NoteNewModal"
+  tabindex="-1" role="dialog" aria-labelledby="NoteNewModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="NoteNewModalLabel">Create New Note</h4>
+      </div>
+      <div class="modal-body">
+        <form role="form" id="NoteNewForm">
+        <div class="form-group">
+          <input type="text" class="form-control" name="note_name" placeholder="Note Name"/>
+        </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="NoteNewSubmit">Create Note</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+<div class="row">
+  <div class="col-md-2 text-center">
+    <button type="button" class="btn btn-default" id="Sync"
+      title="Sync local data with server storage">
+      <span class="glyphicon glyphicon-cloud-upload"></span> Sync
+    </button>
+  </div>
+  <div class="col-md-6">
+    <ol class="breadcrumb">
+      <li class="active" id="NotePath"></li>
+    </ol>
+  </div>
+  <div class="col-md-4 text-right">
+    <button type="button" class="btn btn-success btn-xs" id="NoteNew"
+      data-toggle="modal" data-target="#NoteNewModal">New Note</button>
+    <button type="button" class="btn btn-default btn-xs" id="NoteEdit">
+      <span class="glyphicon glyphicon-edit"></span> Edit</button>
+    <button type="button" class="btn btn-default btn-xs" id="NotePreview">
+      <span class="glyphicon glyphicon-eye-open"></span> Preview</button>
+    <button type="button" class="btn btn-danger btn-xs" id="NoteDelete"
+      data-toggle="modal" data-target="#NoteDeleteModal"><span
+        class="glyphicon glyphicon-trash"></span> Delete</button>
+ </div>
+</div>
+
+<div class="row">
+  <div class="col-md-2" id="PageNav">
+    <ul class="nav nav-pills nav-stacked" id="Pages">
+      <!-- <li class="active"><a href="#/notes/Home">Home</a></li> -->
+    </ul>
+  </div>
+  <div class="col-md-10">
+    <div id="epiceditor"></div>
+  </div>
+</div>

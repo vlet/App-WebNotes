@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="/favicon.ico">
+
+    <title>Web Notes</title>
+
+    <link href="/vendors/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+
+    [% files = [ 'editor', 'noteitem' ] %]
+    [% FOREACH file IN files %]
+    <script type="text/template" id="[% file %]-template">
+    [% file = file _ '.tt' %]
+    [% INCLUDE $file %]
+    </script>
+    [% END %]
+
+  </head>
+
+  <body>
+
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" id="MainNav">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Web Notes</a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="/notes/Home">Home</a></li>
+              <li><a href="#about">About</a></li>
+            </ul>
+            <form class="navbar-form" role="search">
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search">
+                <span class="input-group-btn">
+              <button type="submit" class="btn
+                  btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                </span>
+              </div>
+            </form>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+
+      <!-- About -->
+      <div class="modal fade" id="AboutNoteModal"
+        tabindex="-1" role="dialog" aria-labelledby="AboutNoteModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="AboutNoteModalLabel">About App::WebNote</h4>
+            </div>
+            <div class="modal-body">
+              <div class="jumbotron">
+                <h1>App::WebNotes</h1>
+                <p>This is webapp powered by Perl Dancer, Backbone and Epiceditor</p>
+                <p>Save your notes written in Markdown and access them from anywhere</p>
+                <p><button type="button" class="btn btn-primary"
+                  data-dismiss="modal">Close</button></p>
+              </div>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
+
+      <!-- Begin page content -->
+      <div class="container" id="Content">
+     </div>
+    </div>
+
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted credit">Powered by Perl</p>
+      </div>
+    </div>
+
+
+    <script src="/vendors/jquery/jquery-2.0.3.min.js"></script>
+    <script src="/vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendors/epiceditor/js/epiceditor.min.js"></script>
+    <script src="/vendors/google-code-prettify/prettify.js"></script>
+    <script src="/vendors/underscore/underscore-min.js"></script>
+    <script src="/vendors/backbone/backbone-min.js"></script>
+    <script src="/js/models/wn-model.js"></script>
+    <script src="/js/collections/wn-collection.js"></script>
+    <script src="/js/views/wn-views.js"></script>
+    <script src="/js/routers/wn-router.js"></script>
+    <script src="/js/wn.js"></script>
+  </body>
+</html>
