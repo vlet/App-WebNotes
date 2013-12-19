@@ -1,5 +1,5 @@
 requires 'Dancer', '1.3';
-requires 'Template-Toolkit', '0';
+requires 'Template', '0';
 requires 'YAML', '0';
 requires 'Encode', '0';
 
