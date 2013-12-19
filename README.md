@@ -27,10 +27,10 @@ All notes saved in localStorage and may be synced to server storage (plain json 
 ## Screnshots
 
 * Markdown Preview
-![Screenshot](/images/screenshot.png)
+![Screenshot](/public/images/screenshot.png)
 
 * Editor
-![Screenshot](/images/screenshot2.png)
+![Screenshot](/public/images/screenshot2.png)
 
 * Fullscreen Editor
-![Screenshot](/images/screenshot3.png)
+![Screenshot](/public/images/screenshot3.png)
